@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KFC Menu</title>
+<script src="/static/script.js"></script>
+</head>
+
+<body>
+
+<h1>KFC Menu</h1>
+
+{% for item in items %}
+
+<div>
+
+<h3>{{item.name}}</h3>
+<p>₹{{item.price}}</p>
+
+<button onclick="order('{{item.name}}')">
+Order Now
+</button>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
